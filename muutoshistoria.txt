@@ -1,3 +1,10 @@
+4.2.2015
+
+- Kaikki painettujen versioiden ISBN-tunnukset 020$z-kentästä säilytetään konversiossa
+- 020$q-kenttä ei aiheuta enää virheilmoituksia
+- 020-kentän ladontaa korjattu, osakenttien järjestys tulee nyt oikein
+
+=============================================
 12.1.2015
 
 - Toistettavien kielikoodien käsittelyssä esiintynyt virhe korjattu

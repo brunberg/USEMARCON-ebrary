@@ -1,5 +1,5 @@
 ﻿MARC21 bibliographic  to MARC21
-Ebrary-tietueiden muokkausta (ISBD + RDA) 3.2.2014 UI + LL + TV / Päivitetty 12.1.2015 TV
+// Ebrary-tietueiden muokkausta (ISBD + RDA) 3.2.2014 UI + LL + TV / Päivitetty 4.2.2015 TV
 
 000/1-5/   | 000/1-5/        | S
 000/6/     | 000/6/          | S
@@ -48,7 +48,7 @@ Ebrary-tietueiden muokkausta (ISBD + RDA) 3.2.2014 UI + LL + TV / Päivitetty 12
 020I2 | <A76I2 | '8'
 020$a | <A76$a | S; RegReplace('[\\s](.*)', '')
 020$z | <A76$i | 'Painettu:'
-020$a | 020$q  | If (RegFind(@020$a, '\\(') >= 0) Then S; RegReplace('(.*)\\(', ''); RegReplace('\\)', '')
+020$a | <A76$q  | If (RegFind(@020$a, '\\(') >= 0) Then S; RegReplace('(.*)\\(', ''); RegReplace('\\)', '')
 020$q | <A73$q | S
 020$z | <A76$z | S; RegReplace('[\\s](.*)', '')
 
@@ -650,8 +650,8 @@ F45 | 245 | S;
 
 A76I1 | 776I1       | '0'
 A76I1 | 776I2       | '8'
-A76$i | 776$i       | If (n=1) And (no=1) Then 'Painettu:'
-A76$z | 776$z       | If (n=1) And (no=1) Then S
+A76$i | 776$i       | If (n=1) Then 'Painettu:'
+A76$z | 776$z(no)   | S
 
 780I1 | 780I1       | S
 780I2 | 780I2       | S

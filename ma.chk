@@ -40,7 +40,7 @@ Format checking file
 019?| I1= | I2= | $6? | $8* | $a_ |
 
 // International Standard Book Number
-020*| I1=_ | I2=_ | $6? | $8* | $a? | $c? | $z* |
+020*| I1=_ | I2=_ | $6? | $8* | $a? | $c? | $q* | $z* |
 
 // International Standard Serial Number
 022*| I1=_01 | I2=_ | $2? | $6? | $8* | $a? | $l? | $m* | $y* | $z* |
