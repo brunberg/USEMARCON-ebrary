@@ -1,5 +1,5 @@
 ﻿MARC21 bibliographic  to MARC21
-// Ebrary-tietueiden muokkausta (ISBD + RDA) 3.2.2014 UI + LL + TV / Päivitetty 4.2.2015 TV
+// RDA-täydennykset 6.7.2016 / TV
 
 000/1-5/   | 000/1-5/        | S
 000/6/     | 000/6/          | S
@@ -158,7 +158,6 @@ A76$q | 020$q  | S
 100$e | 100$e       | Table('Funktiot.tbl')
 100$q | 100$q       | S
 
-
 //Funktiotermit RDA-kuvailusta 10/2013				 
 110I1 | 110I1       | S
 110I2 | 110I2       | S
@@ -285,13 +284,19 @@ F45 | 245 | S;
 310I2 | 310I2       | S
 310$a | 310$a       | S
 
-// lisäys 13.3.2012 isbd-0
 245I1 | 336I1       | ' '
 245I2 | 336I2       | ' '
-245$a | 336$a       | 'Teksti'
+000   | 336$a       | 'teksti'
+000   | 336$b       | 'txt'
+000   | 336$2       | 'rdacontent'
 245I1 | 337I1       | ' '
 245I2 | 337I2       | ' '
-245$a | 337$a       | 'elektroninen'
+000   | 337$a       | 'tietokonekäyttöinen'
+000   | 337$b       | 'c'
+000   | 337$2       | 'rdamedia'
+000   | 338$a       | 'verkkoaineisto'
+000   | 338$b       | 'cr'
+000   | 338$2       | 'rdacarrier'
 
 351I1 | 351I1       | ' '
 351I2 | 351I2       | S 
