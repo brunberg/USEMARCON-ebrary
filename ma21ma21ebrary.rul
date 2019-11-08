@@ -49,7 +49,7 @@
 020I1 | <A76I1 | '0'
 020I2 | <A76I2 | '8'
 020$a | <A76$a | S; RegReplace('[\\s](.*)', '')
-020$z | <A76$i | 'Painettu:'
+020$z | <A76$i | 'Tryckt:'
 020$a | <A76$q  | If (RegFind(@020$a, '\\(') >= 0) Then S; RegReplace('(.*)\\(', ''); RegReplace('\\)', '')
 020$q | <A73$q | S
 020$z | <A76$z | S; RegReplace('[\\s](.*)', '')
@@ -354,7 +354,7 @@ F45 | 245 | S;
 008 | 506I2         | ' '
 //008 | 506$a         | 'Luettavissa Ebrary-lisenssin hankkineiden kirjastojen verkossa; Access limited to Ebrary affiliated library networks.'
 //Turun AMK: 14.11.13 alkaen muutettu Melindaan sopiva fraasi
-008 | 506$a         | 'Aineisto on saatavissa lisenssin hankkineissa kirjastoissa. - Access is permitted via the licensee institutions network.'
+008 | 506$a         | 'Tillgänglig inom Hankens lokalnät. Available within the Hanken network.'
 008 | 506$f         | 'Online access with authorization'
 008 | 506$2         | 'star'
 
@@ -412,16 +412,16 @@ F45 | 245 | S;
 534$k | 534$k       | S
 534$x | 534$x       | S
 
-008 | 538I1         | ' '
-008 | 538I2         | ' '
-008 | 538$a         | 'Internet-yhteys; WWW-selain.'
+//008 | 538I1         | ' '
+//008 | 538I2         | ' '
+//008 | 538$a         | 'Internet-yhteys; WWW-selain.'
 
 //lisätty metadatan käyttörajoitushuomautus
 008   | 540(nto)I1  | ' '
 008   | 540(nto)I2  | ' '
 008   | 540(nto)$3  | 'Metadata'
-008   | 540(nto)$a  | 'Ei poimintaa. No copying;'
-008   | 540(nto)$b  | 'Ebook Central.'
+008   | 540(nto)$a  | 'Ei poimintaa. No Copying;'
+008   | 540(nto)$b  | 'ProQuest Ebook Central.'
 
 // Immediate source of acquisition note
 541I1 | 541I1       | ' '
@@ -464,9 +464,9 @@ F45 | 245 | S;
 588$a | 588(nto)$a       | S
 
 // Kuvailun perusta
-008 | 588(nto)I1         | ' '
-008 | 588(nto)I2         | ' '
-008 | 588(nto)$a    | 'Kuvailu Ebook Central -palvelusta.'
+//008 | 588(nto)I1         | ' '
+//008 | 588(nto)I2         | ' '
+//008 | 588(nto)$a    | 'Kuvailu Ebook Central -palvelusta.'
 
 600I1 | 600I1       | S
 600I2 | 600I2       | S 
@@ -646,7 +646,7 @@ F45 | 245 | S;
 
 776I1 | 776I1       | S
 776I2 | 776I2       | S
-776$i | 776$i       | 'Painettu:'
+776$i | 776$i       | 'Tryckt:'
 776$a | 776$a       | S
 776$s | 776$s       | S
 776$t | 776$t       | S
@@ -668,7 +668,7 @@ F45 | 245 | S;
 
 A76I1 | 776I1       | '0'
 A76I1 | 776I2       | '8'
-A76$i | 776$i       | If (n=1) Then 'Painettu:'
+A76$i | 776$i       | If (n=1) Then 'Tryckt:'
 A76$z | 776$z(no)   | S
 
 780I1 | 780I1       | S
@@ -713,13 +713,11 @@ A76$z | 776$z(no)   | S
 //Turun AMK: poistettu 856z-osakentta
 //856$z | 856$z       | S
 //856$z | 856$z       | 'E-kirja: linkki kokotekstiin'
-856$u | 856$y       | 'Linkki verkkoaineistoon - Link to online resource'
+856$u | 856$y       | 'E-bok, fulltext tillgänglig / E-book, full text available'
 
 //Lisätään Kohassa erillisen varastotietueen sijaan 852 suoraan biblioon
 000   | 852I1       | '8'
 000   | 852I2       | ' '
-000   | 852$a       | 'FI-Humak'
-000   | 852$b       | 'HUM'
-000   | 852$c       | 'PDA'
-000   | 852$h       | 'Ebook Central'
-000   | 852$n       | 'fi'
+000   | 852$a       | 'shh'
+000   | 852$b       | 'ebok'
+000   | 852$h       | 'ProQuest Ebook Central (Subscribed and Own)'
